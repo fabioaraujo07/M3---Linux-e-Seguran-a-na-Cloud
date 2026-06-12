@@ -1,0 +1,23 @@
+# Acesso remoto por SSH
+
+
+# Acesso remoto por SSH
+
+## Estado do serviço SSH
+O serviço SSH (OpenSSH) está instalado no sistema, mas encontra-se inativo (inactive/dead).  
+Isto significa que o servidor SSH não está atualmente a aceitar ligações remotas.
+
+Estado observado:
+- Loaded: instalado e reconhecido pelo systemd
+- Active: inactive (não está em execução)
+- TriggeredBy: ssh.socket (pode ser ativado sob pedido)
+
+
+## Endereço identificado
+192.168.150.133
+
+##Comando de ligação
+sudo systemctl start ssh
+
+## Resultado obtido
+Após correr o comando de ligação obtive o serviço ssh ativo, como demostra o print "SSH running" na pasta evidencias

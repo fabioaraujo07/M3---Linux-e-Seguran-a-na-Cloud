@@ -1,0 +1,38 @@
+sudo apt update
+→ Atualiza a lista de pacotes disponíveis nos repositórios do sistema.
+
+sudo apt install nginx
+→ Instala o servidor web Nginx, que vai servir o WordPress no navegador.
+
+sudo apt install php-fpm php-mysql
+→ Instala o PHP-FPM (processador PHP para o servidor web) e o módulo de ligação ao MySQL/MariaDB.
+
+sudo systemctl status nginx
+→ Verifica o estado do serviço Nginx (ativo, inativo ou com erros).
+
+sudo systemctl restart nginx
+→ Reinicia o Nginx para aplicar alterações de configuração.
+
+mysql -u root -p
+→ Acede ao sistema de base de dados MySQL/MariaDB como utilizador root.
+
+CREATE DATABASE wordpress;
+→ Cria a base de dados chamada “wordpress” onde serão guardados os dados do site.
+
+CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'senha';
+→ Cria um utilizador da base de dados chamado wpuser com password definida (usado pelo WordPress).
+
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
+→ Dá permissões totais ao utilizador wpuser apenas na base de dados wordpress.
+
+cp -r wordpress /var/www/html/
+→ Copia os ficheiros do WordPress para o diretório público do servidor web.
+
+chown -R www-data:www-data /var/www/html/wordpress
+→ Altera o dono dos ficheiros para o utilizador do servidor web (www-data), permitindo acesso correto.
+
+wget https://wordpress.org/latest.tar.gz
+→ Faz download da versão mais recente do WordPress a partir do site oficial.
+
+tar -xvf latest.tar.gz
+→ Extrai o ficheiro comprimido do WordPress (.tar.gz), tornando os ficheiros disponíveis.

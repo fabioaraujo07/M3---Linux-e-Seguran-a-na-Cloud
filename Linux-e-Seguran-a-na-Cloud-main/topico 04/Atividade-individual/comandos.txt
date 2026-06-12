@@ -1,0 +1,32 @@
+ufw status
+→ Verifica estado do firewall
+
+ufw allow ssh
+→ Permite acesso SSH
+
+ufw allow http
+→ Permite acesso web HTTP
+
+ufw enable
+→ Ativa o firewall
+
+ss -tuln
+→ Mostra portas abertas
+
+systemctl status nginx
+→ Verifica se o servidor web está ativo
+
+sudo find /var/www/html/wordpress -type d -exec chmod 755 {} \;
+→ Define permissões 755 para todos os diretórios do WordPress.
+→ O proprietário pode ler, escrever e executar; os restantes utilizadores podem ler e executar.
+→ Esta configuração permite o funcionamento do WordPress sem conceder permissões excessivas.
+
+sudo find /var/www/html/wordpress -type f -exec chmod 644 {} \;
+→ Define permissões 644 para todos os ficheiros do WordPress.
+→ O proprietário pode ler e escrever; os restantes utilizadores podem apenas ler.
+→ Ajuda a proteger os ficheiros contra alterações não autorizadas.
+
+ls -l
+→ Lista os ficheiros e diretórios com informação detalhada.
+→ Permite verificar permissões, proprietário, grupo, tamanho e data de modificação dos ficheiros.
+→ Utilizado para confirmar que as permissões foram aplicadas corretamente.

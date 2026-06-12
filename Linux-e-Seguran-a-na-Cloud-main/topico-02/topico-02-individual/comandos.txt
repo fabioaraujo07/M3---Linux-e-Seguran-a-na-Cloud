@@ -1,0 +1,10 @@
+touch - criar ficheiro.
+mkdir - criar diretório.
+nano - abrir editor de texto.
+cd - mudar de diretório.
+whoami - Mostra o nome do utilizador que está atualmente autenticado na sessão.
+groups - Mostra apenas os grupos dos quais o utilizador faz parte.
+id - Exibe informações completas sobre o utilizador: UID (User ID), GID (Group ID) principal e grupos aos quais pertence.
+chmod - Alterar as permissões de acesso a ficheiros e diretórios
+systemctl status shh - verificar o estado do serviço ssh
+systemctl start ssh - iniciar o serviço ssh

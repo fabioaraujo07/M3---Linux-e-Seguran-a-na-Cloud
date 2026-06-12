@@ -1,0 +1,30 @@
+uptime
+→ Mostra há quanto tempo o sistema está ligado e a carga atual.
+
+free -h
+→ Mostra a utilização de memória RAM em formato legível.
+
+df -h
+→ Mostra a utilização dos discos e partições.
+
+sudo systemctl status nginx
+→ Verifica se o serviço Nginx está ativo.
+
+journalctl -n 30
+→ Mostra os últimos 30 registos do sistema.
+
+sudo tail -n 20 /var/log/nginx/access.log
+→ Mostra os últimos acessos ao servidor web.
+
+sudo tail -n 20 /var/log/nginx/error.log
+→ Mostra os últimos erros registados pelo Nginx.
+
+tar -czvf wordpress-backup.tar.gz /var/www/html
+→ Cria backup da pasta /var/www/html onde estão guardados os ficheiros do wordpress
+
+mkdir ~/teste-recuperacao
+→ Criar pasta para teste de recuperação de backup
+
+tar -xzvf wordpress-backup.tar.gz -C ~/teste-recuperacao
+→ Restaurar backup
+
